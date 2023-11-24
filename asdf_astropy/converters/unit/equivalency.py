@@ -3,7 +3,7 @@ from asdf.extension import Converter
 
 class EquivalencyConverter(Converter):
     tags = ("tag:astropy.org:astropy/units/equivalency-*",)
-    types = ("astropy.units.equivalencies.Equivalency",)
+    types = ("astropy.units.Equivalency",)
 
     def to_yaml_tree(self, obj, tag, ctx):
         return [

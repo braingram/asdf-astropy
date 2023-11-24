@@ -116,12 +116,12 @@ class OrthoPolynomialConverter(TransformConverterBase):
 
     tags = ("tag:stsci.edu:asdf/transform/ortho_polynomial-*",)
     types = (
-        "astropy.modeling.polynomial.Legendre1D",
-        "astropy.modeling.polynomial.Legendre2D",
-        "astropy.modeling.polynomial.Chebyshev1D",
-        "astropy.modeling.polynomial.Chebyshev2D",
-        "astropy.modeling.polynomial.Hermite1D",
-        "astropy.modeling.polynomial.Hermite2D",
+        "astropy.modeling.models.Legendre1D",
+        "astropy.modeling.models.Legendre2D",
+        "astropy.modeling.models.Chebyshev1D",
+        "astropy.modeling.models.Chebyshev2D",
+        "astropy.modeling.models.Hermite1D",
+        "astropy.modeling.models.Hermite2D",
     )
 
     def to_yaml_tree_transform(self, model, tag, ctx):

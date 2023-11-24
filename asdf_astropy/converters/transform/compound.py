@@ -44,7 +44,7 @@ class CompoundConverter(TransformConverterBase):
         "tag:stsci.edu:asdf/transform/concatenate-*",
         "tag:stsci.edu:asdf/transform/fix_inputs-*",
     )
-    types = ("astropy.modeling.core.CompoundModel",)
+    types = ("astropy.modeling.CompoundModel",)
 
     def select_tag(self, model, tags, ctx):
         tag_name = _OPERATOR_TO_TAG_NAME[model.op]

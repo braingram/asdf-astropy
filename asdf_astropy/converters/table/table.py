@@ -5,8 +5,8 @@ from asdf.tags.core.ndarray import NDArrayType
 class ColumnConverter(Converter):
     tags = ("tag:stsci.edu:asdf/core/column-*",)
     types = (
-        "astropy.table.column.Column",
-        "astropy.table.column.MaskedColumn",
+        "astropy.table.Column",
+        "astropy.table.MaskedColumn",
     )
 
     def to_yaml_tree(self, obj, tag, ctx):
@@ -61,8 +61,8 @@ class AsdfTableConverter(Converter):
 class AstropyTableConverter(Converter):
     tags = ("tag:astropy.org:astropy/table/table-*",)
     types = (
-        "astropy.table.table.Table",
-        "astropy.table.table.QTable",
+        "astropy.table.Table",
+        "astropy.table.QTable",
     )
 
     def to_yaml_tree(self, obj, tag, ctx):
@@ -92,7 +92,7 @@ class AstropyTableConverter(Converter):
 
 class NdarrayMixinConverter(Converter):
     tags = ("tag:astropy.org:astropy/table/ndarraymixin-*",)
-    types = ("astropy.table.ndarray_mixin.NdarrayMixin",)
+    types = ("astropy.table.NdarrayMixin",)
 
     def to_yaml_tree(self, obj, tag, ctx):
         import numpy as np

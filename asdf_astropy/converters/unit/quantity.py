@@ -5,10 +5,10 @@ from asdf.tags.core.ndarray import NDArrayType
 class QuantityConverter(Converter):
     tags = ("tag:stsci.edu:asdf/unit/quantity-*",)
     types = (
-        "astropy.units.quantity.Quantity",
+        "astropy.units.Quantity",
         # The Distance class has no tag of its own, so we
         # just serialize it as a quantity.
-        "astropy.coordinates.distances.Distance",
+        "astropy.coordinates.Distance",
     )
 
     def to_yaml_tree(self, obj, tag, ctx):

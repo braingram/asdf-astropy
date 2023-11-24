@@ -29,7 +29,7 @@ class RemapAxesConverter(TransformConverterBase):
     """
 
     tags = ("tag:stsci.edu:asdf/transform/remap_axes-*",)
-    types = ("astropy.modeling.mappings.Mapping",)
+    types = ("astropy.modeling.models.Mapping",)
 
     def to_yaml_tree_transform(self, model, tag, ctx):
         node = {"mapping": list(model.mapping)}

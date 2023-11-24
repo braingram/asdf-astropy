@@ -3,10 +3,7 @@ from asdf_astropy.converters.unit.quantity import QuantityConverter
 
 class AngleConverter(QuantityConverter):
     tags = ("tag:astropy.org:astropy/coordinates/angle-*",)
-    types = (
-        "astropy.coordinates.angles.Angle",
-        "astropy.coordinates.angles.core.Angle",
-    )
+    types = ("astropy.coordinates.Angle",)
 
     def from_yaml_tree(self, node, tag, ctx):
         from astropy.coordinates.angles import Angle
@@ -16,10 +13,7 @@ class AngleConverter(QuantityConverter):
 
 class LatitudeConverter(QuantityConverter):
     tags = ("tag:astropy.org:astropy/coordinates/latitude-*",)
-    types = (
-        "astropy.coordinates.angles.Latitude",
-        "astropy.coordinates.angles.core.Latitude",
-    )
+    types = ("astropy.coordinates.Latitude",)
 
     def from_yaml_tree(self, node, tag, ctx):
         from astropy.coordinates.angles import Latitude
@@ -29,10 +23,7 @@ class LatitudeConverter(QuantityConverter):
 
 class LongitudeConverter(QuantityConverter):
     tags = ("tag:astropy.org:astropy/coordinates/longitude-*",)
-    types = (
-        "astropy.coordinates.angles.Longitude",
-        "astropy.coordinates.angles.core.Longitude",
-    )
+    types = ("astropy.coordinates.Longitude",)
 
     def to_yaml_tree(self, obj, tag, ctx):
         tree = super().to_yaml_tree(obj, tag, ctx)

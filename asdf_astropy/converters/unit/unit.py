@@ -9,13 +9,13 @@ class UnitConverter(Converter):
         "tag:astropy.org:astropy/units/unit-*",
     )
     types = (
-        "astropy.units.core.CompositeUnit",
-        "astropy.units.core.IrreducibleUnit",
-        "astropy.units.core.NamedUnit",
-        "astropy.units.core.PrefixUnit",
-        "astropy.units.core.Unit",
-        "astropy.units.core.UnitBase",
-        "astropy.units.core.UnrecognizedUnit",
+        "astropy.units.CompositeUnit",
+        "astropy.units.IrreducibleUnit",
+        "astropy.units.NamedUnit",
+        "astropy.units.PrefixUnit",
+        "astropy.units.Unit",
+        "astropy.units.UnitBase",
+        "astropy.units.UnrecognizedUnit",
         "astropy.units.function.mixin.IrreducibleFunctionUnit",
         "astropy.units.function.mixin.RegularFunctionUnit",
     )
