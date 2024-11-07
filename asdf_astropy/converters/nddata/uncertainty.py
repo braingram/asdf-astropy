@@ -8,6 +8,7 @@ class UncertaintyBaseConverter(Converter):
 
     def from_yaml_tree(self, node, tag, ctx):
         import astropy.nddata
+
         return getattr(astropy.nddata, node["class"])(node["array"], node.get("unit"))
 
     def to_yaml_tree(self, nddata_uncertainty, tag, ctx):
